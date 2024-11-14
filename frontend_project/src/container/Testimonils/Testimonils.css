@@ -1,0 +1,140 @@
+/* Container for each testimonial item */
+.app__testimonial-item {
+  width: 500px;              /* Fixed width for consistent sizing */
+  max-width: 500px;          /* Limits the width to 300px */
+  min-height: 320px;         /* Fixed height to ensure uniform height for each item */
+  background-color: var(--white-color);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+  display: flex;
+  flex-direction: column;    /* Stacks content vertically */
+  padding: 1.5rem;           /* Slightly increased padding for breathing room */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Testimonial content container */
+.app__testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;               /* Adjusted gap for spacing between elements */
+  text-align: center;        /* Center-aligns text within each item */
+}
+
+/* Styling for the feedback text */
+.app__testimonial-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;               /* Darker color for readability */
+  margin: 0;                 /* Removes default margin */
+  line-height: 1.5;          /* Increases readability */
+  overflow: hidden;          /* Prevents text overflow */
+  text-overflow: ellipsis;   /* Adds ellipsis if text overflows */
+  white-space: normal;       /* Allows text to wrap within the fixed width */
+  max-height: 4.5rem;        /* Limits the height to control large feedback */
+  overflow-wrap: break-word; /* Wraps long words to prevent overflow */
+}
+
+/* Styling for the name */
+.app__testimonial-content h4 {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Styling for the company name */
+.app__testimonial-content h5 {
+  color: #666;               /* Subtle color for less emphasis */
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Avatar styling */
+.app__testimonial-item img {
+  width: 80px;               /* Slightly smaller image size for balance */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;       /* Spacing between image and content */
+  border: 3px solid var(--secondary-color); /* Adds a border for focus */
+}
+
+/* Hover effect for the testimonial item */
+.app__testimonial-item:hover {
+  transform: scale(1.05);    /* Grows slightly on hover */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+
+.app__testimonils-btns div{
+    width: 50px;
+    height: 50px;
+    background-color: var(--white-color);
+    margin: 1rem 1rem;
+    border-radius: 50%;
+cursor: pointer;
+}
+
+.app__testimonils-btns div svg{
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+
+.app__testimonils-btns div svg:hover{
+    transform: scale(2);
+}
+
+
+
+
+
+
+.app__testimonials-brands{
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.app__testimonials-brands div{
+    width: 150px;
+    margin: 1.5em;
+}
+
+.app__testimonials-brands div img{
+    width: 100%;
+    height: auto;
+    filter: grayscale(1);
+    object-fit: cover;
+}
+
+.app__testimonials-brands div img:hover{
+    filter: grayscale(0);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+@media(max-width:450px){
+    .app__testimonials-brands div{
+        width: 70px;
+        margin: 1rem;
+    }
+    
+}
+
+
+@media(max-width:800px) {
+    .app__testimonial-item {
+        width: 100%;
+        flex-direction: column;
+    
+        }
+}
